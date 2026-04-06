@@ -1,0 +1,342 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Cosmos Botánico Palette */
+    --background: 234 33% 4%;       /* #07070E */
+    --foreground: 38 20% 92%;       /* #F0EDE6 */
+
+    --card: 215 49% 8%;             /* #081323 */
+    --card-foreground: 38 20% 92%;  /* #F0EDE6 */
+
+    --popover: 215 49% 8%;
+    --popover-foreground: 38 20% 92%;
+
+    --primary: 148 37% 39%;         /* #3D8A5F */
+    --primary-foreground: 38 20% 92%;
+
+    --secondary: 215 35% 10%;       /* #0B1C2A */
+    --secondary-foreground: 38 20% 92%;
+
+    --muted: 240 23% 7%;            /* #0B0B17 */
+    --muted-foreground: 36 12% 75%; /* #C8C0B0 */
+
+    --accent: 148 37% 39%;          /* #3D8A5F */
+    --accent-foreground: 38 20% 92%;
+
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 38 20% 92%;
+
+    --border: 148 37% 39% / 0.12;
+    --input: 215 49% 8%;
+    --ring: 148 37% 39%;
+
+    --radius: 0.25rem;
+
+    /* Brand tokens */
+    --jade-deep: 153 38% 17%;      /* #1A3D2E */
+    --jade-mid: 148 37% 26%;       /* #2A5C42 */
+    --jade-glow: 148 37% 39%;      /* #3D8A5F */
+    --jade-light: 148 42% 54%;     /* #5BB882 */
+    --gold-dim: 40 37% 40%;        /* #8A7040 */
+    --gold-warm: 38 54% 50%;       /* #C4973A */
+    --gold-bright: 43 76% 64%;     /* #E8C060 */
+    --star-white: 38 20% 92%;      /* #F0EDE6 */
+    --moon-dust: 36 12% 75%;       /* #C8C0B0 */
+    --ash: 264 7% 50%;             /* #7A7585 */
+    --void: 234 33% 4%;            /* #07070E */
+    --deep-space: 240 23% 7%;      /* #0B0B17 */
+    --nebula: 240 25% 8%;          /* #0D0D1A */
+    --cosmos: 215 49% 8%;          /* #081323 */
+    --cosmos-mid: 215 35% 10%;     /* #0B1C2A */
+
+    /* Sidebar (required by shadcn) */
+    --sidebar-background: 234 33% 4%;
+    --sidebar-foreground: 38 20% 92%;
+    --sidebar-primary: 148 37% 39%;
+    --sidebar-primary-foreground: 38 20% 92%;
+    --sidebar-accent: 148 37% 39%;
+    --sidebar-accent-foreground: 38 20% 92%;
+    --sidebar-border: 148 37% 39% / 0.12;
+    --sidebar-ring: 148 37% 39%;
+  }
+
+  .dark {
+    --background: 234 33% 4%;
+    --foreground: 38 20% 92%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 400;
+    /* Starfield background */
+    background-color: #07070E;
+    background-image:
+      radial-gradient(1px 1px at 8% 12%, rgba(240,237,230,0.55) 0%, transparent 100%),
+      radial-gradient(1px 1px at 22% 7%, rgba(240,237,230,0.30) 0%, transparent 100%),
+      radial-gradient(1.5px 1.5px at 48% 18%, rgba(240,237,230,0.50) 0%, transparent 100%),
+      radial-gradient(1px 1px at 67% 5%, rgba(240,237,230,0.40) 0%, transparent 100%),
+      radial-gradient(1px 1px at 82% 22%, rgba(240,237,230,0.45) 0%, transparent 100%),
+      radial-gradient(1px 1px at 93% 8%, rgba(240,237,230,0.35) 0%, transparent 100%),
+      radial-gradient(1px 1px at 15% 38%, rgba(240,237,230,0.45) 0%, transparent 100%),
+      radial-gradient(1.5px 1.5px at 35% 55%, rgba(91,184,130,0.40) 0%, transparent 100%),
+      radial-gradient(1px 1px at 58% 42%, rgba(240,237,230,0.50) 0%, transparent 100%),
+      radial-gradient(1px 1px at 76% 61%, rgba(240,237,230,0.30) 0%, transparent 100%),
+      radial-gradient(1.5px 1.5px at 88% 45%, rgba(232,192,96,0.35) 0%, transparent 100%),
+      radial-gradient(1px 1px at 4% 68%, rgba(240,237,230,0.40) 0%, transparent 100%),
+      radial-gradient(1px 1px at 42% 78%, rgba(240,237,230,0.45) 0%, transparent 100%),
+      radial-gradient(1px 1px at 62% 85%, rgba(240,237,230,0.35) 0%, transparent 100%),
+      radial-gradient(1.5px 1.5px at 95% 72%, rgba(91,184,130,0.30) 0%, transparent 100%),
+      radial-gradient(1px 1px at 28% 92%, rgba(240,237,230,0.45) 0%, transparent 100%),
+      radial-gradient(1px 1px at 74% 95%, rgba(240,237,230,0.30) 0%, transparent 100%),
+      radial-gradient(1px 1px at 18% 55%, rgba(232,192,96,0.25) 0%, transparent 100%);
+    background-attachment: fixed;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Barlow', sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+}
+
+@layer components {
+  /* Cosmic background for hero */
+  .cosmic-bg {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cosmic-bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 20% 30%, rgba(61,138,95,0.06) 0%, transparent 50%),
+      radial-gradient(ellipse at 80% 70%, rgba(61,138,95,0.04) 0%, transparent 60%);
+    pointer-events: none;
+  }
+
+  /* Star field animation */
+  .stars {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+  }
+
+  .star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    animation: twinkle 3s ease-in-out infinite;
+  }
+
+  @keyframes twinkle {
+    0%, 100% { opacity: 0.3; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.2); }
+  }
+
+  /* Nebula effect */
+  .nebula {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(61,138,95,0.06) 0%, transparent 70%);
+    border-radius: 50%;
+    filter: blur(80px);
+    animation: float 20s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(30px, -20px) scale(1.05); }
+  }
+
+  /* Card styles */
+  .product-card {
+    background: linear-gradient(180deg, #081323 0%, #0B1C2A 100%);
+    border: 1px solid rgba(61,138,95,0.12);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 4px;
+  }
+
+  .product-card:hover {
+    border-color: rgba(61,138,95,0.35);
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px -20px rgba(61,138,95,0.2);
+  }
+
+  /* Button variants */
+  .btn-cosmic {
+    background: hsl(var(--jade-glow));
+    color: hsl(var(--star-white));
+    font-family: 'Barlow', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+  }
+
+  .btn-cosmic:hover {
+    background: hsl(var(--jade-light));
+    transform: translateY(-2px);
+    box-shadow: 0 0 30px rgba(61,138,95,0.3);
+  }
+
+  .btn-cosmic:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+  }
+
+  .btn-outline-cosmic {
+    background: transparent;
+    border: 1px solid rgba(91,184,130,0.35);
+    color: hsl(var(--jade-light));
+    font-family: 'Barlow', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+  }
+
+  .btn-outline-cosmic:hover {
+    background: rgba(61,138,95,0.1);
+    border-color: hsl(var(--jade-light));
+  }
+
+  /* Form inputs */
+  .input-cosmic {
+    background: #081323;
+    border: 1px solid rgba(61,138,95,0.12);
+    color: hsl(var(--star-white));
+    font-family: 'Barlow', sans-serif;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+  }
+
+  .input-cosmic:focus {
+    outline: none;
+    border-color: hsl(var(--jade-glow));
+    box-shadow: 0 0 0 3px rgba(61,138,95,0.15);
+  }
+
+  .input-cosmic::placeholder {
+    color: hsl(var(--ash));
+  }
+
+  .input-cosmic.error {
+    border-color: hsl(var(--destructive));
+    box-shadow: 0 0 0 3px hsl(var(--destructive) / 0.15);
+  }
+
+  /* Section dividers */
+  .section-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, rgba(61,138,95,0.18) 50%, transparent 100%);
+  }
+
+  /* Glow effects */
+  .glow-text {
+    text-shadow: 0 0 40px rgba(61,138,95,0.4);
+  }
+
+  .glow-box {
+    box-shadow: 0 0 60px -20px rgba(61,138,95,0.2);
+  }
+
+  /* Cart badge */
+  .cart-badge {
+    background: hsl(var(--jade-glow));
+    color: hsl(var(--star-white));
+    font-family: 'Space Mono', monospace;
+    font-size: 0.7rem;
+    font-weight: 700;
+    min-width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Editorial text (Cormorant Garamond) */
+  .font-editorial {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+  }
+
+  /* Mono labels (Space Mono) */
+  .font-label {
+    font-family: 'Space Mono', monospace;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+  }
+
+  /* Gold accent */
+  .text-gold {
+    color: hsl(var(--gold-warm));
+  }
+
+  /* Smooth scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #07070E;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(61,138,95,0.25);
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(61,138,95,0.45);
+  }
+}
+
+@layer utilities {
+  .animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-delay-100 { animation-delay: 100ms; }
+  .animate-delay-200 { animation-delay: 200ms; }
+  .animate-delay-300 { animation-delay: 300ms; }
+  .animate-delay-400 { animation-delay: 400ms; }
+}
