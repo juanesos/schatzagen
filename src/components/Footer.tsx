@@ -1,4 +1,5 @@
 import { Instagram, Facebook, Mail, MapPin, Phone } from "lucide-react";
+import { Link } from "react-router-dom";
 import BrandLogo from "./BrandLogo";
 
 export default function Footer() {
@@ -92,12 +93,12 @@ export default function Footer() {
             © {currentYear} SchatZa.Gen — Todos los derechos reservados
           </p>
           <div className="flex gap-6">
-            <a href="#" className="hover:text-foreground transition-colors text-xs uppercase tracking-wider">
+            <Link to="/terminos" className="hover:text-foreground transition-colors text-xs uppercase tracking-wider">
               Términos
-            </a>
-            <a href="#" className="hover:text-foreground transition-colors text-xs uppercase tracking-wider">
+            </Link>
+            <Link to="/privacidad" className="hover:text-foreground transition-colors text-xs uppercase tracking-wider">
               Privacidad
-            </a>
+            </Link>
           </div>
         </div>
       </div>
