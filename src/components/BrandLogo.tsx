@@ -5,9 +5,9 @@ interface BrandLogoProps {
 
 export default function BrandLogo({ size = "md" }: BrandLogoProps) {
   const heightClass = {
-    sm: "h-12",
-    md: "h-[67px]",
-    lg: "h-24",
+    sm: "h-12 md:h-16",
+    md: "h-16 md:h-20",
+    lg: "h-20 md:h-28",
   }[size];
 
   return (
