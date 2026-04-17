@@ -206,7 +206,7 @@ export default function OrderForm() {
               Recibe <span className="text-jade-light">Información</span>
             </h2>
             <p className="font-editorial text-lg text-muted-foreground">
-              Selecciona las experiencias que te interesan, déjanos tus datos y te enviaremos información sobre lo disponible
+              ¿Te interesó? Escríbenos o déjanos tus datos y te informaremos nuestra disponibilidad.
             </p>
             <div className="section-divider w-24 mx-auto mt-6" />
           </div>

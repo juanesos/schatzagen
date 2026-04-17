@@ -61,9 +61,6 @@ export default function ProductCatalog() {
 
         {/* CTA */}
         <div className="text-center mt-16">
-          <p className="text-muted-foreground mb-4 max-w-xl mx-auto leading-relaxed">
-            ¿Estás interesado? Escríbenos o déjanos tus datos y te informaremos sobre lo que tenemos disponible.
-          </p>
           <button
             onClick={() =>
               document.getElementById("order")?.scrollIntoView({ behavior: "smooth" })
