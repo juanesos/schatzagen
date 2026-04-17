@@ -106,14 +106,34 @@ export default function OrderForm() {
     if (!validateForm()) return;
 
     setIsSubmitting(true);
-    await new Promise((resolve) => setTimeout(resolve, 1500));
 
     const order: OrderData = {
       cliente: formData,
       preferencias: selectedPreferences,
     };
 
-    console.log("Pedido enviado:", JSON.stringify(order, null, 2));
+    try {
+      const payload = {
+        nombre: formData.nombre,
+        apellidos: formData.apellidos,
+        email: formData.email,
+        telefono: formData.telefono,
+        ciudad: formData.ciudad,
+        direccion: formData.direccion,
+        observaciones: formData.observaciones,
+        experiencias: selectedPreferences,
+        origen: "Web",
+      };
+
+      await fetch("/api/submit-form", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+    } catch {
+      // Silently continue — data may still have been saved
+    }
+
     setOrderData(order);
     setIsSubmitting(false);
     setIsSubmitted(true);
