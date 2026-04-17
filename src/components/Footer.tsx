@@ -66,7 +66,9 @@ export default function Footer() {
                 <Instagram className="w-5 h-5" />
               </a>
               <a
-                href="#"
+                href="https://www.facebook.com/schatzagen/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 rounded bg-secondary flex items-center justify-center hover:bg-primary/15 hover:text-primary transition-colors"
                 aria-label="Facebook"
               >
