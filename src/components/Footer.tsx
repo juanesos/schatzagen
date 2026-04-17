@@ -17,7 +17,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-3 gap-12 mb-12">
           <div>
             <div className="mb-4">
-              <BrandLogo size="sm" showIcon={false} />
+              <BrandLogo size="sm" />
             </div>
             <p className="text-muted-foreground text-sm leading-relaxed mb-1">
               Enfoque, recreación y relajación.
