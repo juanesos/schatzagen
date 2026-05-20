@@ -363,7 +363,7 @@ export default function OrderForm() {
             </div>
 
             {/* Submit Buttons */}
-            <div className="flex flex-col sm:flex-row items-center gap-3">
+            <div id="form-cta" className="flex flex-col sm:flex-row items-center gap-3">
               <button
                 type="submit"
                 disabled={!isFormValid || isSubmitting}
@@ -400,7 +400,7 @@ export default function OrderForm() {
 
             {!isFormValid && (
               <p className="text-center text-sm text-muted-foreground font-mono text-xs uppercase tracking-wider">
-                Completa todos los campos obligatorios para continuar
+                Escríbenos o completa los datos para conocer más
               </p>
             )}
           </form>

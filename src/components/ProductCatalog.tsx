@@ -30,7 +30,16 @@ export default function ProductCatalog() {
           {experienceCategories.map((cat, index) => (
             <div
               key={cat.id}
-              className="product-card overflow-hidden group animate-fade-in-up"
+              role="button"
+              tabIndex={0}
+              onClick={() =>
+                document.getElementById("form-cta")?.scrollIntoView({ behavior: "smooth", block: "center" })
+              }
+              onKeyDown={(e) =>
+                e.key === "Enter" &&
+                document.getElementById("form-cta")?.scrollIntoView({ behavior: "smooth", block: "center" })
+              }
+              className="product-card overflow-hidden group animate-fade-in-up cursor-pointer"
               style={{ animationDelay: `${index * 150}ms` }}
             >
               {/* Visual Header */}
