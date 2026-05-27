@@ -105,7 +105,7 @@ El uso continuado del Sitio tras la publicación de cambios implica la aceptaci�
 
 • Correo electrónico: schatzagen@gmail.com
 • WhatsApp: +57 304 228 7991
-• Instagram: @schatza.gen
+• Instagram: @schatzagen
 
 Daremos respuesta a su solicitud en un plazo máximo de diez (10) días hábiles conforme a lo establecido en la Ley 1581 de 2012.`,
   },

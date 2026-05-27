@@ -16,7 +16,7 @@ SchatZa.Gen es una marca colombiana de lifestyle premium orientada al bienestar 
 | **Cosmos Relajante** ☽ | Relajación & Descanso | Desconexión, liberación del estrés y recuperación de energía |
 
 **Contacto comercial:** +57 304 228 7991  
-**Instagram:** [@schatza.gen](https://www.instagram.com/schatza.gen/)  
+**Instagram:** [@schatzagen](https://www.instagram.com/schatzagen/)  
 **País:** Colombia 🇨🇴
 
 ---

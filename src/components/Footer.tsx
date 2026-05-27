@@ -57,7 +57,7 @@ export default function Footer() {
             </h4>
             <div className="flex gap-3">
               <a
-                href="https://www.instagram.com/schatza.gen/"
+                href="https://www.instagram.com/schatzagen/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded bg-secondary flex items-center justify-center hover:bg-primary/15 hover:text-primary transition-colors"

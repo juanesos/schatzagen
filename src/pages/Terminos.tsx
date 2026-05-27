@@ -73,7 +73,7 @@ SchatZa.Gen se reserva el derecho de modificar, suspender o discontinuar el Siti
 
 • Correo electrónico: schatzagen@gmail.com
 • WhatsApp: +57 304 228 7991
-• Instagram: @schatza.gen`,
+• Instagram: @schatzagen`,
   },
 ];
 
